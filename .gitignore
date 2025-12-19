@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
+venv/
+env/
+ENV/
+*.egg-info/
+
+# Models
+backend/models/*.pkl
+backend/models/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build outputs
+dist/
+build/
+
+# Database
+*.db
+*.sqlite
+
+# Deployment
+.vercel/
+.render/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

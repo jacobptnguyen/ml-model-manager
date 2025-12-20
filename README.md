@@ -17,4 +17,4 @@ A full-stack machine learning operations platform for training and managing ML m
 **Frontend:** React 18, TypeScript, Vite, React Router, Axios  
 **Backend:** FastAPI, Python 3.9+, SQLAlchemy, SQLite, Uvicorn  
 **ML/AI:** scikit-learn, XGBoost, pandas, GridSearchCV, Matplotlib  
-**Deployment:** Vercel, Render
+**Deployment:** Docker, Vercel, Render

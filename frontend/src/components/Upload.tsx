@@ -12,7 +12,6 @@ const Upload = () => {
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
   const [parsing, setParsing] = useState(false);
-  const [trainingStartTime, setTrainingStartTime] = useState<number | null>(null);
   const [elapsedTime, setElapsedTime] = useState<number>(0);
   const navigate = useNavigate();
 
@@ -133,17 +132,16 @@ const Upload = () => {
     setSuccess(false);
     setElapsedTime(0);
     const startTime = Date.now();
-    setTrainingStartTime(startTime);
 
     // Update elapsed time every second
-    let intervalId: NodeJS.Timeout | null = null;
+    let intervalId: number | null = null;
     
     try {
       intervalId = setInterval(() => {
         setElapsedTime(Math.floor((Date.now() - startTime) / 1000));
       }, 1000);
 
-      const response = await uploadAndTrain({
+      await uploadAndTrain({
         file,
         modelType,
         modelName,
@@ -164,7 +162,6 @@ const Upload = () => {
       setError(err.response?.data?.detail || 'Failed to train model');
     } finally {
       setLoading(false);
-      setTrainingStartTime(null);
       if (intervalId) {
         clearInterval(intervalId);
       }

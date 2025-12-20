@@ -4,7 +4,7 @@ A full-stack machine learning operations platform for training and managing ML m
 
 ## Live Demo
 
-🚀 **Try It Out** → [Deployment URL]
+🚀 **[Try It Out →](https://ml-model-manager.vercel.app/)**
 
 ## Supported Algorithms
 

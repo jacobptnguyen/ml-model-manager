@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from typing import Optional
+from typing import Optional, Dict, Union
 from datetime import datetime
 
 
@@ -48,7 +48,7 @@ class ModelResponse(BaseModel):
 
 class PredictRequest(BaseModel):
     model_id: int
-    input_data: dict[str, str | float]  # Dictionary of column names to original values (strings or numbers)
+    input_data: Dict[str, Union[str, float]]  # Dictionary of column names to original values (strings or numbers)
 
 
 class PredictResponse(BaseModel):
